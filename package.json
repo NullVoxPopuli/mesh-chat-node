@@ -1,0 +1,26 @@
+{
+  "name": "mesh-chat-node",
+  "version": "0.0.0",
+  "description": "A mesh chat client for node.js (name to be changed)",
+  "main": "src/server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecollis6/mesh-chat-node.git"
+  },
+  "author": "Eli Collis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ecollis6/mesh-chat-node/issues"
+  },
+  "homepage": "https://github.com/ecollis6/mesh-chat-node#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "http": "0.0.0",
+    "jsonfile": "^2.3.0",
+    "path": "^0.12.7"
+  }
+}
