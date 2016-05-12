@@ -1,7 +1,9 @@
 var app = function() {
     this.postMessage = postMessage;
 
-    postMessage;
+    function postMessage() {
+        
+    }
 
     return this;
 }

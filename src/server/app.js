@@ -1,24 +1,22 @@
 'use strict';
 
-var http = require('http');
+//npm modules
 var express = require('express');
+// var http = require('http');
+// var jsonfile = require('jsonfile');
+
+//app modules
+var encryption = require('./encryption/encryption.module.js');
+var api = require('./api/api.module.js');
+var ui = require('./ui/ui.module.js');
+
 var app = express();
 
-app.use(express.static('./build'));
+api.start(app);
+ui.load(app);
 
 app.listen(8080, function() {
     console.log('Express server listening on port 8080');
-    //console.log()
-});
-
-app.get('/test', function() {
-    console.log('hey you hit my test');
-});
-
-app.post('/sendMessage', function(req, res) {
-    console.log('POST /');
-    console.dir(req.body);
-    res.writeHead(200, {'Content-Type' : 'text/html'});
-    res.end('thanks');
-    //console.log(req.body)
+    //pk.generatePublicKey();
+    //encryption.publicKey.generatePublicKey();
 });

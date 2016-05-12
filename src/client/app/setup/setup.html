@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function createKey() {
+            var http = new XMLHttpRequest();
+            var obj = {
+                alias: document.getElementById('USER_ALIAS').value
+            }
+            console.log(obj);
+            http.open('POST', '/createPublicKey', true);
+            http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            http.send(JSON.stringify(obj));
+
+            http.onreadystatechange = function() {
+                console.log(http.response);
+                if (http.response === 'success') {
+                    window.location = 'http://localhost:8080/home';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Node.js Mesh Chat</h1>
+    <div>
+        <strong><span style="color:red">TEMPORARY UI - WILL BE REPLACED WITH REACT/FLUX APP</span></strong>
+    </div>
+    <h2>Looks like you haven't run setup yet...</h2>
+    <div>
+        <p>What is your name?</p>
+        <input type="text" id="USER_ALIAS"/>
+        <button onclick="createKey()">Submit</button>
+    </div>
+
+
+</body>
+</html>
