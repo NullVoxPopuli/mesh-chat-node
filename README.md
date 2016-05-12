@@ -4,7 +4,9 @@ More info coming soon!
 * Node.js  
 
 ## Installation
+Clone the repository and cd into the directory. Run the following commands:
 ```
-git clone https://github.com/ecollis6/mesh-chat-node
 npm install
+npm start
 ```
+
